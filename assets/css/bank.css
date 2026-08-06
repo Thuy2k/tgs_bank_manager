@@ -1,0 +1,41 @@
+/* Danh mục ngân hàng — chỉ vài chỉnh nhỏ trên nền design-system sẵn có */
+
+.tgs-bank__search { min-width: 280px; max-width: 420px; flex: 1 1 280px; }
+
+.tgs-bank__table thead th {
+    background: #eef2f8;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    white-space: nowrap;
+}
+
+.tgs-bank__table td { vertical-align: middle; }
+
+/*
+ * Mã và TK kế toán đọc theo cột dọc nên không cho xuống dòng.
+ * Địa chỉ và ghi chú thì cắt bớt — để tràn thì mỗi dòng cao khác nhau, lướt mắt
+ * xuống cột số tài khoản rất khó dò.
+ */
+.tgs-bank__table td.col-bank_code,
+.tgs-bank__table td.col-account_number,
+.tgs-bank__table td.col-accounting_code { white-space: nowrap; }
+
+.tgs-bank__table td.col-bank_address,
+.tgs-bank__table td.col-note {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tgs-bank__table .btn-xs {
+    padding: 1px 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.tgs-bank__fmt th {
+    background: #eef2f8;
+    font-size: 11px;
+}
