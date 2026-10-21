@@ -52,10 +52,8 @@ class TGS_Bank_Plugin
 
     public static function init()
     {
-        add_filter('tgs_shop_dashboard_routes', [__CLASS__, 'register_routes']);
-        add_filter('tgs_shop_workflow_nav', [__CLASS__, 'add_nav_items'], 10, 2);
-        add_action('admin_enqueue_scripts', [__CLASS__, 'enqueue_assets']);
-
+        // 21/10/2026: BỎ menu "Cấu hình → Tài chính" + các trang Ngân hàng / Hình thức thanh toán / Nhập ngân hàng từ Excel
+        // (danh mục lấy theo "Đồng bộ từ phần mềm kế toán"). Giữ lớp dữ liệu + AJAX vì plugin khác còn dùng (phiếu chi…).
         TGS_Bank_Ajax::init();
     }
 
